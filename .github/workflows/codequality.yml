@@ -1,6 +1,6 @@
 name: CodeQuality
 
-on: [push, pull_request]
+on: [ pull_request]
 
 jobs:
   check:
@@ -12,5 +12,5 @@ jobs:
         with:
           node-version: 14.x
 
-      - run: npm ci
-      - run: npm test
+      - run: npm run ci
+      - run: npm run test
