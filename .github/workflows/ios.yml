@@ -20,7 +20,7 @@ jobs:
 
       - name: Build iOS (debug)
         run: "xcodebuild \
-          -workspace ios/syenah_app.xcodeproj \
+          -workspace ios/syenah_app.xcworkspace \
           -scheme syenah_app \
           clean archive \
           -sdk iphoneos \
