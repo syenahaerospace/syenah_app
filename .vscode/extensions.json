@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "ms-vsliveshare.vsliveshare",
+    "esbenp.prettier-vscode",
+    "msjsdiag.vscode-react-native",
+    "dbaeumer.vscode-eslint"
+  ]
+}
