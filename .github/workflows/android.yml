@@ -14,7 +14,8 @@ jobs:
 
       - run: yarn install --immutable --immutable-cache --check-cache
 
-      - run: ./gradlew assembleDebug
+      - run: yarn debug-build
+      
         working-directory: android
         name: Build Android apk (debug)
 
