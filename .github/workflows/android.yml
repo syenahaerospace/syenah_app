@@ -1,0 +1,26 @@
+name: Android
+
+on: [pull_request]
+
+jobs:
+  check:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js v14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - run: yarn install --immutable --immutable-cache --check-cache
+
+      - run: yarn debug-build
+      
+        working-directory: android
+        name: Build Android apk (debug)
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: debug-release.apk
+          path: android/app/build/outputs/apk/debug/
