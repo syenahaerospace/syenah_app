@@ -17,3 +17,9 @@ jobs:
       - run: ./gradlew assembleDebug
         working-directory: android
         name: Build Android apk (debug)
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: app-release.apk
+          path: android/app/build/outputs/apk/release/
